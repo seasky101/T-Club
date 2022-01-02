@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="header">
+    <h2 class = "text-center">{{news.title }}</h2>
+    <h5 class="text-center">{{ news.create_at }}</h5>
+</div>
+    <hr>
+<div class="content">
+    <div>
+        {{ news.content|safe }}
+    </div>
+</div>
+{% endblock %}

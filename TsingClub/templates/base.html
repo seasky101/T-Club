@@ -1,0 +1,30 @@
+{% load static %}
+
+{% load bootstrap4 %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清社圈</title>
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.0.2/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        {% include 'nav.html' %}
+        {% bootstrap_messages %}
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    <div class="container text-center position-sticky">
+        <footer>2021@清社圈</footer>
+    </div>
+</body>
+</html>
+

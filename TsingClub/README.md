@@ -1,12 +1,25 @@
-## TsingClub
 
-#### **Support**
+# 使用步骤
 
-python3.7
+1. 安装依赖
 
-Django 2.2.5
+```shell
 
-mysql 8.0.23  (Database: tsingclubdb)
+pip install -r requirements.txt
 
-pymysql 1.0.2
+```
+
+2. 启动服务
+
+```shell
+
+python manage.py runserver
+
+```
+
+**部署网站**
+
+社团会长端： http://39.107.35.186/
+
+管理员端：http://39.107.35.186/admin
 

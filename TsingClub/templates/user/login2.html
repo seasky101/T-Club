@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load bootstrap4 %}
+
+    <div class="row">
+        <div class="col-md-7">
+            <img src="/media/index_imgs/1.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-5 border border-primary">
+            <h4 class="text-center">登录</h4>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {% bootstrap_form user_form  %}
+                <div class="text-center">
+                    {% buttons submit='提交' %}
+                    {% endbuttons %}
+                </div>  
+            </form>
+        </div>
+    </div>
+    {% include 'user/change_capha.html' %}
+{% endblock %}

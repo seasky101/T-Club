@@ -1,0 +1,13 @@
+{% extends 'user/base.html' %}
+{% block form-area %}
+    {% load bootstrap4 %}
+    <h4 class="text-center">注册</h4>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% bootstrap_form user_form  %}
+        <div class="text-center">
+            {% buttons submit='提交' %}
+            {% endbuttons %}
+        </div>  
+    </form>
+{% endblock %}

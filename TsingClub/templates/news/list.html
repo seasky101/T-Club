@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>系统公告</h3>
+<hr>
+<ul class="list-group">
+    {% for news in news_list %}
+        <li class="list-group-item">
+            <a href="{% url 'news:detail' news.id %}">
+            {{ news.title|truncatewords:16 }}
+            </a>
+            <span class="float-right">{{ news.create_at }}</span>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

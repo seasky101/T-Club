@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load bootstrap4 %}
+
+{% load render_table from django_tables2 %}
+<h4>年审材料</h4>
+<hr>
+<div>
+    {% render_table year_table %}
+</div>
+
+<h4>十佳社团申请材料</h4>
+<hr>
+<div>
+    {% render_table top10_table %}
+</div>
+{% endblock %}

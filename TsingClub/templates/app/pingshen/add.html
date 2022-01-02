@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load bootstrap4 %}
+    <div>
+        <h3>{{ title }}</h3>
+        <hr>
+        <form class="form" action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form user_form  %}
+            <div class="text-center">
+                {% buttons submit='提交' %}
+                {% endbuttons %}
+            </div>  
+        </form>
+    </div>
+    
+{% endblock %}

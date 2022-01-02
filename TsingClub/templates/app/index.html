@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load bootstrap4 %}
+    <div class="jumbotron">
+        <h1 class="display-4">清社圈</h1>
+        <p class="lead">TsingClub</p>
+        <hr class="my-4">
+        <p>
+            <a href="{% url 'apply' %}" class="btn btn-primary">申请社团</a>
+        </p>
+    </div>
+    
+{% endblock %}

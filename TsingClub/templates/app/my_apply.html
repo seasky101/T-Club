@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load bootstrap4 %}
+
+{% load render_table from django_tables2 %}
+<h4>我的申请</h4>
+<ul class="list-group">
+    <li class="list-group-item">
+        社团名称: {{ org.name }}
+    </li>
+    <li class="list-group-item">
+        社团详情: {{ org.description }}
+    </li>
+    <li class="list-group-item">
+        申请成立书: <a href="/media/{{ org.apply_file }}">下载</a>
+    </li>
+    <li class="list-group-item">
+        成员登记表: <a href="/media/{{ org.member_file }}">下载</a>
+    </li>
+    <li class="list-group-item">
+        社团发起人情况: <a href="/media/{{ org.manager_info_file }}">下载</a>
+    </li>
+    <li class="list-group-item">
+        社团章程: <a href="/media/{{ org.constitution_file }}">下载</a>
+    </li>
+    <li class="list-group-item">
+        教师确认指导书: <a href="/media/{{ org.teacher_confirm_file }}">下载</a>
+    </li>
+    <li class="list-group-item">
+        单位确认指导书: <a href="/media/{{ org.college_confirm_file }}">下载</a>
+    </li>
+    <li class="list-group-item">
+        申请时间: {{ org.apply_at }}
+    </li>
+    <li class="list-group-item">
+        审批时间: {{ org.approve.action_at }}
+    </li>
+</ul>
+<br>
+
+
+{% endblock %}
+

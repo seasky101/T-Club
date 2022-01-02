@@ -1,0 +1,43 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 10px;">
+    <a class="navbar-brand" href="#">清社圈</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">首页 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'news:list' %}">系统公告</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'member_list' %}">成员管理</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'apply' %}">社团申请</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'pingshen_add' 'year' %}">年审材料提交</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'pingshen_add' 'top10' %}">十佳社团材料提交</a>
+        </li>
+        <!--  add links -->
+        
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {% if request.user.is_authenticated %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'my_pingshen' %}">您好, {{ request.user.username }}</a></li> 
+            <li class="nav-item"><a class="nav-link" href="{% url 'user:change_profile' %}">修改密码</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'user:logout' %}">注销</a></li> 
+        {% else %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'user:login' %}">登录</a></li> 
+            {% comment %} <li class="nav-item"><a class="nav-link" href="{% url 'user:register' %}">注册</a></li>  {% endcomment %}
+        {% endif %}
+    </ul>
+    </div>
+  </nav>

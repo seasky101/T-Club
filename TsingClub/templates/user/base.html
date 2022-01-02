@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load bootstrap4 %}
+
+    <div class="row">
+        <div class="col-md-7">
+            <img src="/static/login_bd.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-5 border border-primary">
+            {% block form-area %}
+
+            {% endblock %}
+        </div>
+    </div>
+    {% include 'user/change_capha.html' %}
+{% endblock %}

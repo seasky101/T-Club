@@ -1,0 +1,8 @@
+django==3.1.2
+django_tables2
+django_bootstrap4
+django_simple_captcha
+django_simpleui
+django_ckeditor
+xpinyin
+Faker
